@@ -1,0 +1,1320 @@
+fileFormatVersion: 2
+guid: f6e10f01b2f49b7419e7ad7319cac1da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2258133541350350162
+    second: StartingBackgroundPlanet_0
+  - first:
+      213: -7388640955800278054
+    second: StartingBackgroundPlanet_1
+  - first:
+      213: 6218570246609437436
+    second: StartingBackgroundPlanet_2
+  - first:
+      213: 596342567050593986
+    second: StartingBackgroundPlanet_3
+  - first:
+      213: 7740872546387671643
+    second: StartingBackgroundPlanet_4
+  - first:
+      213: 6984114487318196514
+    second: StartingBackgroundPlanet_5
+  - first:
+      213: -2695388902969490630
+    second: StartingBackgroundPlanet_6
+  - first:
+      213: -4893438096931076512
+    second: StartingBackgroundPlanet_7
+  - first:
+      213: -8510490457695143429
+    second: StartingBackgroundPlanet_8
+  - first:
+      213: 7259461923019817287
+    second: StartingBackgroundPlanet_9
+  - first:
+      213: 9153998769531242571
+    second: StartingBackgroundPlanet_10
+  - first:
+      213: -2573612219983292612
+    second: StartingBackgroundPlanet_11
+  - first:
+      213: -1571101200183570818
+    second: StartingBackgroundPlanet_12
+  - first:
+      213: 223146849063109803
+    second: StartingBackgroundPlanet_13
+  - first:
+      213: 5081348088420399385
+    second: StartingBackgroundPlanet_14
+  - first:
+      213: -86969299800596193
+    second: StartingBackgroundPlanet_15
+  - first:
+      213: 5433486864217650641
+    second: StartingBackgroundPlanet_16
+  - first:
+      213: 1257639469360142614
+    second: StartingBackgroundPlanet_17
+  - first:
+      213: -5886069723179895277
+    second: StartingBackgroundPlanet_18
+  - first:
+      213: -1409530528142923402
+    second: StartingBackgroundPlanet_19
+  - first:
+      213: 8628697947675939968
+    second: StartingBackgroundPlanet_20
+  - first:
+      213: 5620000754622790527
+    second: StartingBackgroundPlanet_21
+  - first:
+      213: -8373251395650711224
+    second: StartingBackgroundPlanet_22
+  - first:
+      213: -6288206815061743188
+    second: StartingBackgroundPlanet_23
+  - first:
+      213: -8542556119120439326
+    second: StartingBackgroundPlanet_24
+  - first:
+      213: 4876173096850189777
+    second: StartingBackgroundPlanet_25
+  - first:
+      213: 6678771647708994311
+    second: StartingBackgroundPlanet_26
+  - first:
+      213: -7588887910039008385
+    second: StartingBackgroundPlanet_27
+  - first:
+      213: -1625358173198983732
+    second: StartingBackgroundPlanet_28
+  - first:
+      213: 1685293899532526277
+    second: StartingBackgroundPlanet_29
+  - first:
+      213: -5545458154699078464
+    second: StartingBackgroundPlanet_30
+  - first:
+      213: 2907141815787483849
+    second: StartingBackgroundPlanet_31
+  - first:
+      213: -494508798494320037
+    second: StartingBackgroundPlanet_32
+  - first:
+      213: 6333619853300979531
+    second: StartingBackgroundPlanet_33
+  - first:
+      213: 3536173523001426477
+    second: StartingBackgroundPlanet_34
+  - first:
+      213: 4726383611942701748
+    second: StartingBackgroundPlanet_35
+  - first:
+      213: 9062505225306659360
+    second: StartingBackgroundPlanet_36
+  - first:
+      213: 3909836681441724161
+    second: StartingBackgroundPlanet_37
+  - first:
+      213: -5593257583969554550
+    second: StartingBackgroundPlanet_38
+  - first:
+      213: -7879157026626759216
+    second: StartingBackgroundPlanet_39
+  - first:
+      213: 6481298219142724570
+    second: StartingBackgroundPlanet_40
+  - first:
+      213: 3791497665908280107
+    second: StartingBackgroundPlanet_41
+  - first:
+      213: -7169978445885881390
+    second: StartingBackgroundPlanet_42
+  - first:
+      213: -5224536001956040452
+    second: StartingBackgroundPlanet_43
+  - first:
+      213: 406762187959583962
+    second: StartingBackgroundPlanet_44
+  - first:
+      213: -6837152486366594123
+    second: StartingBackgroundPlanet_45
+  - first:
+      213: -1772837218380854002
+    second: StartingBackgroundPlanet_46
+  - first:
+      213: 6163889433700092357
+    second: StartingBackgroundPlanet_47
+  - first:
+      213: 3219465705039360239
+    second: StartingBackgroundPlanet_48
+  - first:
+      213: -2399085878208504489
+    second: StartingBackgroundPlanet_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 54
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2ea6c128f79a0e0800000000000000
+      internalID: -2258133541350350162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb2f988236467990800000000000000
+      internalID: -7388640955800278054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf208ff11bccc4650800000000000000
+      internalID: 6218570246609437436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6ce79b762a64800800000000000000
+      internalID: 596342567050593986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_4
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ab20b619a1d6b60800000000000000
+      internalID: 7740872546387671643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_5
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221b24f6f1f8ce060800000000000000
+      internalID: 6984114487318196514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_6
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3349f2d21e089ad0800000000000000
+      internalID: -2695388902969490630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0664f063af3071cb0800000000000000
+      internalID: -4893438096931076512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_8
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9babce40aa4e980800000000000000
+      internalID: -8510490457695143429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741021e182aceb460800000000000000
+      internalID: 7259461923019817287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_10
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48c5448169890f70800000000000000
+      internalID: 9153998769531242571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_11
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c379a4e4251b84cd0800000000000000
+      internalID: -2573612219983292612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_12
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e4ed058c3523ae0800000000000000
+      internalID: -1571101200183570818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_13
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4872f70e6c81300800000000000000
+      internalID: 223146849063109803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_14
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919786e0a23948640800000000000000
+      internalID: 5081348088420399385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_15
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f116503f1e50bcef0800000000000000
+      internalID: -86969299800596193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_16
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5b171e38f976b40800000000000000
+      internalID: 5433486864217650641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_17
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619d8b22f68047110800000000000000
+      internalID: 1257639469360142614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_18
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3163ea2c5ca705ea0800000000000000
+      internalID: -5886069723179895277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_19
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679e8f1e377507ce0800000000000000
+      internalID: -1409530528142923402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_20
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084dd5d011b4fb770800000000000000
+      internalID: 8628697947675939968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_21
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bf7b809e04efd40800000000000000
+      internalID: 5620000754622790527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_22
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8411233183c3ccb80800000000000000
+      internalID: -8373251395650711224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_23
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9ed02d73dcbb8a0800000000000000
+      internalID: -6288206815061743188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_24
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e79cf5587eb27980800000000000000
+      internalID: -8542556119120439326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_25
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd6215b895aba340800000000000000
+      internalID: 4876173096850189777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_26
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b15ad8d63cfac50800000000000000
+      internalID: 6678771647708994311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_27
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b4ed947aadea690800000000000000
+      internalID: -7588887910039008385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_28
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd52bd5a519179e0800000000000000
+      internalID: -1625358173198983732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_29
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2e4cf5fdd536710800000000000000
+      internalID: 1685293899532526277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_30
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c44e5c70339a03b0800000000000000
+      internalID: -5545458154699078464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_31
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c272b9241e385820800000000000000
+      internalID: 2907141815787483849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_32
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ad0772ed62329f0800000000000000
+      internalID: -494508798494320037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_33
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47dd5a13b985e750800000000000000
+      internalID: 6333619853300979531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_34
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2244ae6513031130800000000000000
+      internalID: 3536173523001426477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_35
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba82168adc779140800000000000000
+      internalID: 4726383611942701748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_36
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a5689bc7c74cd70800000000000000
+      internalID: 9062505225306659360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_37
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107402f1fb7824630800000000000000
+      internalID: 3909836681441724161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_38
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f2c3a9cd1c062b0800000000000000
+      internalID: -5593257583969554550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_39
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5936a0e6c97a290800000000000000
+      internalID: -7879157026626759216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_40
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbbf53146232f950800000000000000
+      internalID: 6481298219142724570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_41
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b8f27f90b1e9430800000000000000
+      internalID: 3791497665908280107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_42
+      rect:
+        serializedVersion: 2
+        x: 2311
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3c3c5779e1f7c90800000000000000
+      internalID: -7169978445885881390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_43
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0bb2fdf28be77b0800000000000000
+      internalID: -5224536001956040452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_44
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad444690e0c15a500800000000000000
+      internalID: 406762187959583962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_45
+      rect:
+        serializedVersion: 2
+        x: 2476
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbb0f6d90e8d11a0800000000000000
+      internalID: -6837152486366594123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_46
+      rect:
+        serializedVersion: 2
+        x: 2531
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d41d951fd9567e0800000000000000
+      internalID: -1772837218380854002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_47
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c94a7248c88a8550800000000000000
+      internalID: 6163889433700092357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_48
+      rect:
+        serializedVersion: 2
+        x: 2641
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe07c635007ddac20800000000000000
+      internalID: 3219465705039360239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartingBackgroundPlanet_49
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 1
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dd9bbca1cb4bed0800000000000000
+      internalID: -2399085878208504489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
