@@ -14,11 +14,11 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - EnemyProjectile
+  - PlayerProjectile
+  - Walls
+  - Object
   - 
   - 
   - 
@@ -47,18 +47,27 @@ TagManager:
   - name: Ground
     uniqueID: 2232353549
     locked: 0
-  - name: Water
-    uniqueID: 3210276187
-    locked: 0
-  - name: Player
-    uniqueID: 3656984173
+  - name: Item
+    uniqueID: 2120333087
     locked: 0
   - name: Object
     uniqueID: 1731866235
     locked: 0
+  - name: NPC
+    uniqueID: 458998257
+    locked: 0
   - name: Enemy
     uniqueID: 507880881
     locked: 0
-  - name: NPC
-    uniqueID: 458998257
+  - name: Player
+    uniqueID: 3656984173
+    locked: 0
+  - name: Projectile
+    uniqueID: 3210276187
+    locked: 0
+  - name: PlayerBehindObject
+    uniqueID: 1416123453
+    locked: 0
+  - name: UI_Popup
+    uniqueID: 32751743
     locked: 0
