@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour
     // saves the game
     public void SaveGame() 
     {
-        SaveSystem.SavePlayer(FindObjectOfType<PlayerController>()); // FindObjectOfType<CameraController>(), FindObjectOfType<InventoryManager>());
+        SaveSystem.SavePlayer(FindObjectOfType<PlayerController>(), FindObjectOfType<PlayerCamera>()); // , FindObjectOfType<InventoryManager>());
         gameSavedNoticeAnim.SetTrigger("Fade");
     }
 
@@ -63,7 +63,7 @@ public class PauseMenu : MonoBehaviour
     //exits application
     public void ExitGame() 
     {
-        SaveSystem.SavePlayer(FindObjectOfType<PlayerController>());//, FindObjectOfType<CameraController>(), FindObjectOfType<InventoryManager>());
+        SaveSystem.SavePlayer(FindObjectOfType<PlayerController>(), FindObjectOfType<PlayerCamera>()); //, FindObjectOfType<InventoryManager>());
         UIManager.Instance.DeactivatePauseScreen();
         SceneManager.LoadScene("MainMenu");
     }

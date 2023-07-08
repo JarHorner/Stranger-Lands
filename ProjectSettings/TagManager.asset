@@ -7,21 +7,36 @@ TagManager:
   - Ground
   - Object
   - Water
+  - Enemy
+  - OutOfWater
+  - Key
+  - MovableBlock
+  - KeyDoor
+  - Walls
+  - Item
+  - DialogCanvas
+  - Projectile
+  - InteractBox
+  - Boss
+  - Switch
+  - PlayerProjectile
+  - ColorBlock
+  - HitBox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - EnemyBarrier
   - Water
   - UI
   - Enemy
   - EnemyProjectile
   - PlayerProjectile
+  - Player
   - Walls
+  - Boss
+  - BossWeakSpot
   - Object
-  - 
-  - 
-  - 
   - 
   - 
   - 
