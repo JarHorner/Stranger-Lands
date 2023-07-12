@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
     {
         if(!isPaused)
         {
-            //pauseGame.Pause(true);
+            pauseGame.Pause(true);
             isPaused = true;
             pauseScreen.SetActive(true);
 
@@ -68,7 +68,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            //pauseGame.UnPause();
+            pauseGame.UnPause();
             isPaused = false;
             pauseScreen.SetActive(false);
 

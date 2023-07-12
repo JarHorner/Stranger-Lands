@@ -41,7 +41,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: -637983123
   m_SortingLayer: 6
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1715604451433344739, guid: fc306fd30e5c93c46b98a3ca197cd76f, type: 3}
+  m_Sprite: {fileID: 8634910836203069435, guid: fc306fd30e5c93c46b98a3ca197cd76f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
