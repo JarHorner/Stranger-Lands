@@ -9,7 +9,6 @@ public class HealthVisual : MonoBehaviour
     public static HealthSystem healthSystemStatic;
     private float periodicTime = 0.05f;
     private float fullHealthAnimTime = 0.2f;
-    private PlayerController player;
     private bool isHealing = false;
     [SerializeField] private Sprite heart0Sprite;
     [SerializeField] private Sprite heart1Sprite;
@@ -34,15 +33,13 @@ public class HealthVisual : MonoBehaviour
         if (healthSystemStatic == null && !SaveSystem.LoadedGame)
         {
             Debug.Log("Start health");
-            player = FindObjectOfType<PlayerController>();
-            healthSystem = new HealthSystem(player.TotalHearts);
+            healthSystem = new HealthSystem(PlayerController.player.TotalHearts);
             SetHealthSystem(healthSystem);
             currentHeart = heartImageList[heartImageList.Count-1];
         }
         else if (healthSystemStatic == null && SaveSystem.LoadedGame)
         {
             Debug.Log("Load health");
-            player = FindObjectOfType<PlayerController>();
             healthSystem = new HealthSystem(SaveSystem.CurrentPlayerData.totalHearts);
             SetHealthSystem(healthSystem);
             int healthGone = (SaveSystem.CurrentPlayerData.totalHearts * 4) - SaveSystem.CurrentPlayerData.currentHealth;
@@ -110,7 +107,7 @@ public class HealthVisual : MonoBehaviour
     {
         //hearts health system is dead
         Debug.Log("YOUR DEAD!");
-        player.currentState = PlayerState.dead;
+        PlayerController.player.currentState = PlayerState.dead;
     }
 
     private void RefreshAllHearts()

@@ -8,11 +8,12 @@ public class DialogueTrigger : MonoBehaviour
     #region Variables
 
     public Dialogue dialogue;
-    //private ContextClue contextClue;
+    private ContextClue contextClue;
     [SerializeField] private InputActionAsset inputMaster;
     private InputAction interact;
     private bool containsItem = false;
     [SerializeField] private bool oneTime;
+    [SerializeField] private bool isNPC;
 
     #endregion
 
@@ -20,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start() 
     {
-        //contextClue = FindObjectOfType<ContextClue>();
+        contextClue = FindObjectOfType<ContextClue>();
         var playerActionMap = inputMaster.FindActionMap("Player");
 
         interact = playerActionMap.FindAction("Interact");
@@ -30,7 +31,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue(InputAction.CallbackContext context)
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, isNPC);
 
         // if (containsItem)
         // {
@@ -39,23 +40,23 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        // if (other.tag == "InteractBox")
-        // {
+        if (other.tag == "InteractBox")
+        {
             Debug.Log("can talk");
-            //contextClue.Interact();
+            contextClue.ChangeContextClue(isNPC);
             if (!interact.enabled)
             {
                 interact.performed += TriggerDialogue;
                 interact.Enable();
             }
-        // }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) 
     {
         if (other.tag == "InteractBox")
         {
-            //contextClue.Disappear();
+            contextClue.Disappear();
             interact.performed -= TriggerDialogue;
             interact.Disable();
             if (oneTime)

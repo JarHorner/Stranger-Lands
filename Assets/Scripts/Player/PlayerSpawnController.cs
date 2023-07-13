@@ -10,7 +10,6 @@ public class PlayerSpawnController : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject spawnLocation;
-    private PlayerController playerController;
     private PauseGame pauseGame;
     private PlayerCamera cam;
     [SerializeField] private string placeName;
@@ -46,10 +45,9 @@ public class PlayerSpawnController : MonoBehaviour
             Vector2 newLocation = new Vector2(SaveSystem.CurrentPlayerData.lastPosition[0], SaveSystem.CurrentPlayerData.lastPosition[1]);
             player.transform.position = newLocation;
         }
-        playerController = player.GetComponent<PlayerController>();
         pauseGame = FindObjectOfType<PauseGame>();
         //if player died, and is reviving
-        if (playerController.IsReviving == true) {
+        if (PlayerController.player.IsReviving == true) {
             player.transform.position = spawnLocation.transform.position;
             cam = FindObjectOfType<PlayerCamera>();
         }
@@ -68,10 +66,10 @@ public class PlayerSpawnController : MonoBehaviour
             justSpawned = false;
         }
 
-        if (playerController.IsReviving == true)
+        if (PlayerController.player.IsReviving == true)
         {
             HealthVisual.healthSystemStatic.Heal(12);
-            playerController.IsReviving = false;
+            PlayerController.player.IsReviving = false;
         }
     }
 

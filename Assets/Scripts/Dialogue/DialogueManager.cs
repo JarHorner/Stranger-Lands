@@ -12,19 +12,20 @@ public class DialogueManager : MonoBehaviour
     public Image speakerImage;
     [SerializeField] private Animator animator;
     private PauseGame pauseGame;
-    private PlayerController player;
+    private ContextClue contextClue;
     private static DialogueManager _instance;
     private Queue<string> sentences;
     private bool startedConversation;
+    private bool talkingNPC;
 
     #endregion
-    void Awake() 
+    void Awake()
     {
         //Singleton Effect
         if (_instance != null && _instance != this)
         {
             Debug.Log($"Destroyed {this.gameObject}");
-            Destroy (this.gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -33,20 +34,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void Start() 
+    private void Start()
     {
         sentences = new Queue<string>();
         pauseGame = FindObjectOfType<PauseGame>();
-        player = FindObjectOfType<PlayerController>();
+        contextClue = FindObjectOfType<ContextClue>();
     }
 
     //when player interacts with object that has dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, bool isNPC)
     {
         Debug.Log("dialogue");
-        if(!startedConversation)
+        if (!startedConversation)
         {
-            player.currentState = PlayerState.interact;
+            talkingNPC = isNPC;
+            // changes the context clue to speach
+            contextClue.Speach();
+
+            PlayerController.player.currentState = PlayerState.interact;
             pauseGame.Pause(false);
             nameText.text = dialogue.name;
             speakerImage.enabled = true;
@@ -55,7 +60,10 @@ public class DialogueManager : MonoBehaviour
             else
                 speakerImage.sprite = dialogue.sprite;
             animator.SetBool("isOpen", true);
-            
+
+            // changes the context clue to speach
+            contextClue.Speach();
+
             //ensures queue is empty of past sentences, then populates queue with new sentences.
             sentences.Clear();
 
@@ -97,9 +105,12 @@ public class DialogueManager : MonoBehaviour
     //un-pauses the game and closes the text menus.
     private void EndDialogue()
     {
-        player.currentState = PlayerState.walk;
+        PlayerController.player.currentState = PlayerState.walk;
         pauseGame.UnPause();
         animator.SetBool("isOpen", false);
+
+        contextClue.ChangeContextClue(talkingNPC);
+
         startedConversation = false;
     }
     #region Methods

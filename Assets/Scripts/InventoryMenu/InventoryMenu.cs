@@ -183,5 +183,18 @@ public class InventoryMenu : MonoBehaviour
         usableItems.Reset();
     }
 
+    public bool HasSwimMedal()
+    {
+        foreach (var item in playerInventory.myInventory)
+        {
+            if (item != null && item.name == "SwimMedal")
+            {
+                if (item.playerOwns == true)
+                    return true;
+            }
+        }
+        return false;
+    }
+
     #endregion
 }

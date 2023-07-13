@@ -8,7 +8,6 @@ public class HurtPlayer : MonoBehaviour
 {
 
     #region Variables
-    private PlayerController player;
     // private Enemy enemy;
     private float waitToHurt = 1f;
     private bool isTouching;
@@ -22,7 +21,6 @@ public class HurtPlayer : MonoBehaviour
     void Start()
     {
         // enemy = GetComponent<Enemy>();
-        player = FindObjectOfType<PlayerController>();
     }
 
     void Update()
@@ -33,7 +31,7 @@ public class HurtPlayer : MonoBehaviour
             waitToHurt -= Time.deltaTime;
             if (waitToHurt <= 0)
             {
-                player.DamagePlayer(4);
+                PlayerController.player.DamagePlayer(4);
                 waitToHurt = 1f;
             }
         }
@@ -51,7 +49,7 @@ public class HurtPlayer : MonoBehaviour
             {
                 Debug.Log("Hit");
                 Knockback.PushBack(this.transform, other.transform.parent.GetComponent<Rigidbody2D>());
-                player.DamagePlayer(4);
+                PlayerController.player.DamagePlayer(4);
                 waitToHit = 1f;
             }
         }

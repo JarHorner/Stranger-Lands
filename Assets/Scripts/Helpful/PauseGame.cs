@@ -15,8 +15,8 @@ public class PauseGame : MonoBehaviour
         }
         PlayerController player = PlayerController.player;   
         // setting speed to zero and inMenu to true ensure the player is not in moving animation 
-        //player.GetComponent<Animator>().SetFloat("Speed", 0);
-        //player.GetComponent<Animator>().SetBool("inMenu", true);
+        player.GetComponent<Animator>().SetFloat("Speed", 0);
+        player.GetComponent<Animator>().SetBool("inMenu", true);
         // needed to ensure movement completely stops
         player.currentState = PlayerState.idle;
         // ensures player doesnt face direction of keys
@@ -30,6 +30,6 @@ public class PauseGame : MonoBehaviour
         PlayerController player = PlayerController.player; 
         // these ensure player goes back to normal
         player.enabled = true;
-        //player.GetComponent<Animator>().SetBool("inMenu", false);
+        player.GetComponent<Animator>().SetBool("inMenu", false);
     }
 }
