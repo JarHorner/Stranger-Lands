@@ -18,6 +18,7 @@ public enum PlayerState
 public class PlayerController : MonoBehaviour
 {
     #region Variables
+    public bool inOverworld;
     private static bool playerExists;
     public static PlayerController player;
     [SerializeField] private InputActionAsset inputMaster;
@@ -157,7 +158,7 @@ public class PlayerController : MonoBehaviour
             currentState = PlayerState.swim;
         }
 
-            //this code activates when player is damaged, causing the flashing of the sprite
+        //this code activates when player is damaged, causing the flashing of the sprite
         if (flashActive)
         {
             //if true, starts process of changing the players alpha level to flash when hit
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
         {
             interactBox.SetActive(false);
         }
-        else 
+        else
         {
             interactBox.SetActive(true);
         }
@@ -334,12 +335,12 @@ public class PlayerController : MonoBehaviour
         currentState = PlayerState.walk;
         rb.velocity = Vector2.zero;
     }
-    
+
     //THIS TRIGGERS SWIMMING!!!!
     //enables regular movement when colliding with OutOfWater trigger when leaving water.
-    private void OnTriggerEnter2D(Collider2D collider) 
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Water") 
+        if (collider.gameObject.tag == "Water")
         {
             Debug.Log("water triggered");
             //sets swimming animation and new player speed
@@ -364,8 +365,12 @@ public class PlayerController : MonoBehaviour
     }
 
     //Getters and Setters for player variables.
-
-   public Vector2 LastPlayerLocation
+    public bool InOverworld
+    {
+        get { return inOverworld; }
+        set { inOverworld = value; }
+    }
+    public Vector2 LastPlayerLocation
     {
         get { return lastPlayerLocation; }
         set { lastPlayerLocation = value; }
@@ -394,7 +399,7 @@ public class PlayerController : MonoBehaviour
         get { return isCarrying; }
         set { isCarrying = value; }
     }
-     public bool IsMoving
+    public bool IsMoving
     {
         get { return isMoving; }
         set { isMoving = value; }

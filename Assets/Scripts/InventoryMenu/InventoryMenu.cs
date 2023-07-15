@@ -33,7 +33,7 @@ public class InventoryMenu : MonoBehaviour
         PopulateInventorySlot("SwimMedal");
         PopulateInventorySlot("Lanturn");
         PopulateInventorySlot("Bomb");
-        PopulateInventorySlot("Bow");
+        // PopulateInventorySlot("Bow");
         PopulateInventorySlot("Earthquake");
 
         //Singleton Effect
@@ -124,63 +124,51 @@ public class InventoryMenu : MonoBehaviour
     private void AssignItemToSlot(InputAction.CallbackContext context)
     {
         currentItem = EventSystem.current.currentSelectedGameObject.GetComponent<InventorySlot>().thisItem;
-        if (context.action.name.Equals("AssignItem1") && currentItem.usable)
+        try
         {
-            itemBox1.transform.GetChild(0).GetComponent<Image>().enabled = true;
-            itemBox1.transform.GetChild(0).GetComponent<Image>().sprite = currentItem.itemImage;
-            if (currentItem.numberHeld > -1)
-                itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = currentItem.numberHeld.ToString();
-            else
-                itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
-            usableItems.myInventory[0] = currentItem;
-
-            if (usableItems.myInventory[1] == usableItems.myInventory[0])
+            if (context.action.name.Equals("AssignItem1") && currentItem.usable)
             {
-                itemBox2.transform.GetChild(0).GetComponent<Image>().sprite = null;
-                itemBox2.transform.GetChild(0).GetComponent<Image>().enabled = false;
-                itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
-                usableItems.myInventory[1] = null;
+                itemBox1.transform.GetChild(0).GetComponent<Image>().enabled = true;
+                itemBox1.transform.GetChild(0).GetComponent<Image>().sprite = currentItem.itemImage;
+                if (currentItem.numberHeld > -1)
+                    itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = currentItem.numberHeld.ToString();
+                else
+                    itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
+                usableItems.myInventory[0] = currentItem;
+
+                if (usableItems.myInventory[1] == usableItems.myInventory[0])
+                {
+                    itemBox2.transform.GetChild(0).GetComponent<Image>().sprite = null;
+                    itemBox2.transform.GetChild(0).GetComponent<Image>().enabled = false;
+                    itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
+                    usableItems.myInventory[1] = null;
+                }
+            }
+            else if (context.action.name.Equals("AssignItem2") && currentItem.usable)
+            {
+                itemBox2.transform.GetChild(0).GetComponent<Image>().enabled = true;
+                itemBox2.transform.GetChild(0).GetComponent<Image>().sprite = currentItem.itemImage;
+                if (currentItem.numberHeld > -1)
+                    itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = currentItem.numberHeld.ToString();
+                else
+                    itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
+                usableItems.myInventory[1] = currentItem;
+
+                if (usableItems.myInventory[0] == usableItems.myInventory[1])
+                {
+                    itemBox1.transform.GetChild(0).GetComponent<Image>().sprite = null;
+                    itemBox1.transform.GetChild(0).GetComponent<Image>().enabled = false;
+                    itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
+                    usableItems.myInventory[0] = null;
+                }
             }
         }
-        else if (context.action.name.Equals("AssignItem2") && currentItem.usable)
+        catch (System.Exception)
         {
-            itemBox2.transform.GetChild(0).GetComponent<Image>().enabled = true;
-            itemBox2.transform.GetChild(0).GetComponent<Image>().sprite = currentItem.itemImage;
-            if (currentItem.numberHeld > -1)
-                itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = currentItem.numberHeld.ToString();
-            else
-                itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
-            usableItems.myInventory[1] = currentItem;
 
-            if (usableItems.myInventory[0] == usableItems.myInventory[1])
-            {
-                itemBox1.transform.GetChild(0).GetComponent<Image>().sprite = null;
-                itemBox1.transform.GetChild(0).GetComponent<Image>().enabled = false;
-                itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
-                usableItems.myInventory[0] = null;
-            }
+            Debug.Log("This item does not exist");
         }
-    }
 
-    //Used by buttons to switch inventory screens.
-    public void SwitchScreen(GameObject screenToOpen)
-    {
-        screenToOpen.SetActive(true);
-        //clear selected object
-        EventSystem.current.SetSelectedGameObject(null);
-        //set a new selected object
-        EventSystem.current.SetSelectedGameObject(screenToOpen.transform.Find("ToOtherScreens").GetChild(0).gameObject);
-    }
-
-    //Used by buttons to switch inventory screens.
-    public void CloseScreen(GameObject screenToClose)
-    {
-        screenToClose.SetActive(false);
-    }
-
-    private void OnApplicationQuit()
-    {
-        usableItems.Reset();
     }
 
     public bool HasSwimMedal()

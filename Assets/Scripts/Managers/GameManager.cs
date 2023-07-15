@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static bool exists;
     private string currentScene;
     private PlayerUI playerUI;
-    // [SerializeField] InventoryManager inventoryManager;
+    [SerializeField] InventoryMenu inventoryMenu;
     
     #endregion
 
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SaveSystem.SavePlayer(FindObjectOfType<PlayerController>(), FindObjectOfType<PlayerCamera>()); //, FindObjectOfType<InventoryManager>());
+        SaveSystem.SavePlayer(FindObjectOfType<PlayerController>(), FindObjectOfType<PlayerCamera>(), FindObjectOfType<InventoryMenu>());
         ChangeCurrentScene();
         playerUI = FindObjectOfType<PlayerUI>();
         //changes the amt of keys shown in the UI depending on scene (Will add more with more dungeons)
@@ -52,23 +52,23 @@ public class GameManager : MonoBehaviour
 
     public void UseItem(InputAction.CallbackContext context)
     {
-        // FindItemToUse(context);
+        FindItemToUse(context);
     }
 
-    // private void FindItemToUse(InputAction.CallbackContext context)
-    // {
-    //     Debug.Log(context.action.name);
-    //     if (Time.timeScale != 0 && context.action.name == "UseItem1")
-    //     {
-    //         if (inventoryManager.usableItems.myInventory[0] != null)
-    //             inventoryManager.usableItems.myInventory[0].Use();
-    //     }
-    //     else if (Time.timeScale != 0 && context.action.name == "UseItem2")
-    //     {
-    //         if (inventoryManager.usableItems.myInventory[1] != null)
-    //             inventoryManager.usableItems.myInventory[1].Use();
-    //     }
-    // }
+    private void FindItemToUse(InputAction.CallbackContext context)
+    {
+        Debug.Log(context.action.name);
+        if (Time.timeScale != 0 && context.action.name == "UseItem1")
+        {
+            if (inventoryMenu.usableItems.myInventory[0] != null)
+                inventoryMenu.usableItems.myInventory[0].Use();
+        }
+        else if (Time.timeScale != 0 && context.action.name == "UseItem2")
+        {
+            if (inventoryMenu.usableItems.myInventory[1] != null)
+                inventoryMenu.usableItems.myInventory[1].Use();
+        }
+    }
 
     private void ChangeCurrentScene()
     {

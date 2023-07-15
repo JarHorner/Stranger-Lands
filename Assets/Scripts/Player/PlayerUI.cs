@@ -11,6 +11,7 @@ public class PlayerUI : MonoBehaviour
 
     #region Variables
     private static bool exists;
+    [SerializeField] private Image keySprite;
     [SerializeField] private TMP_Text keyCount;
     [SerializeField] private TMP_Text moneyCount;
     [SerializeField] private GameObject itemBox1;
@@ -36,7 +37,11 @@ public class PlayerUI : MonoBehaviour
 
     void Start()
     {
-
+        if (PlayerController.player.InOverworld)
+        {
+            keySprite.enabled = false;
+            keyCount.enabled = false;
+        }
     }
 
     private void Update() 

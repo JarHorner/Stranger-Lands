@@ -19,10 +19,10 @@ public class PlayerData
 
     #region Methods
 
-    public PlayerData(PlayerController player, PlayerCamera camera) //InventoryManager inventoryManager)
+    public PlayerData(PlayerController player, PlayerCamera camera, InventoryMenu inventoryMenu)
     {
         // if any of these are null (they should not be), nothing is saved
-        if (player != null && camera != null) //&& inventoryManager != null)
+        if (player != null && camera != null && inventoryMenu != null)
         {
             lastScene = SceneTracker.LastSceneName;
             lastPosition = new float[2];
@@ -40,8 +40,8 @@ public class PlayerData
         {
             currentHealth += healthSystem.HeartList[i].Fragments;
         }
-        //     item1 = 0;
-        //     item2 = 1;
+        item1 = 0;
+        item2 = 1;
         }
     }
 
