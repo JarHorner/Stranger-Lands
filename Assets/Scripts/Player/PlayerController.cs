@@ -113,10 +113,10 @@ public class PlayerController : MonoBehaviour
         pause.started += uiManager.OpenPauseMenu;
         inventory.Enable();
         inventory.started += uiManager.OpenInventoryMenu;
-        // useItem1.Enable();
-        // useItem1.started += gameManager.UseItem;
-        // useItem2.Enable();
-        // useItem2.started += gameManager.UseItem;
+        useItem1.Enable();
+        useItem1.started += gameManager.UseItem;
+        useItem2.Enable();
+        useItem2.started += gameManager.UseItem;
     }
 
     private void OnDisable()
@@ -131,10 +131,10 @@ public class PlayerController : MonoBehaviour
         pause.Disable();
         inventory.started -= uiManager.OpenInventoryMenu;
         inventory.Disable();
-        // useItem1.started -= gameManager.UseItem;
-        // useItem1.Disable();
-        // useItem2.started -= gameManager.UseItem;
-        // useItem2.Disable();
+        useItem1.started -= gameManager.UseItem;
+        useItem1.Disable();
+        useItem2.started -= gameManager.UseItem;
+        useItem2.Disable();
     }
 
     private void Update()
