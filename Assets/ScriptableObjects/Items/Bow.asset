@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Bow
   itemDescription: Shoot an arrow. Remember to protect your eyes!
   itemImage: {fileID: -5136362410743442089, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
-  numberHeld: 30
+  numberHeld: 22
   maxNumberHeld: 30
   usable: 1
   unique: 0

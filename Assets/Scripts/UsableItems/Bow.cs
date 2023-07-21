@@ -21,6 +21,7 @@ public class Bow : MonoBehaviour
         player = PlayerController.player;
         if (bowInvItem.numberHeld != 0 && player.ShootCounter <= 0f)
         {
+            player.Animator.SetTrigger("Shoot");
             Vector2 temp = new Vector2(player.Animator.GetFloat("Horizontal"), player.Animator.GetFloat("Vertical"));
             Arrow arrow = Instantiate(projectile, player.gameObject.transform.position, Quaternion.identity).GetComponent<Arrow>();
             arrow.Setup(temp, ShootDirection());
