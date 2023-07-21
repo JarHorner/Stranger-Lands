@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     private float invulnerableTime = 0.5f;
     private float waitToLoad = 1.8f;
     private float attackCounter = 0.35f;
+    private int swordDamage = 1;
     private float shootCounter = 0f;
     private bool deathCoRunning = false;
     public Vector3 lastPlayerLocation;
