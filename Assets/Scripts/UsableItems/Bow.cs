@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class Bow : MonoBehaviour
 {
@@ -41,12 +42,25 @@ public class Bow : MonoBehaviour
     private void UseArrow()
     {
         playerUI = FindObjectOfType<PlayerUI>();
+        TextMeshProUGUI item1Count = playerUI.ItemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        Image item1 = playerUI.ItemBox1.transform.GetChild(0).GetComponent<Image>();
+        TextMeshProUGUI item2Count = playerUI.ItemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        Image item2 = playerUI.ItemBox2.transform.GetChild(0).GetComponent<Image>();
+
+        Debug.Log(GameManager.gameManager.lastItemSlotUsed);
         bowInvItem.numberHeld--;
+
         //checks which item box has the bow, and adjusts arrow value
-        if (playerUI.ItemBox1.transform.GetChild(0).GetComponent<Image>().sprite.name.Equals("Bow"))
-            playerUI.ItemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "" + bowInvItem.numberHeld;
-        else
-            playerUI.ItemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "" + bowInvItem.numberHeld;
+        if (GameManager.gameManager.lastItemSlotUsed == "UseItem1")
+        {
+            item1Count.text = "" + bowInvItem.numberHeld;
+
+        }
+        else if (GameManager.gameManager.lastItemSlotUsed == "UseItem2")
+        {
+            item2Count.text = "" + bowInvItem.numberHeld;
+        }
+
     }
 
     #endregion

@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
 
     #region Variables
     private static bool exists;
+    public static GameManager gameManager;
     private string currentScene;
     private PlayerUI playerUI;
     [SerializeField] InventoryMenu inventoryMenu;
+    public string lastItemSlotUsed = "";
     
     #endregion
 
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
         if (!exists)
         {
             exists = true;
+            gameManager = this;
             //ensures same player object is not destoyed when loading new scences
             DontDestroyOnLoad(this.gameObject);
         }
@@ -57,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void FindItemToUse(InputAction.CallbackContext context)
     {
-        Debug.Log(context.action.name);
+        lastItemSlotUsed = context.action.name;
         if (Time.timeScale != 0 && context.action.name == "UseItem1")
         {
             if (inventoryMenu.usableItems.myInventory[0] != null)

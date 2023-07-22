@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 //Basic structure of an Item, can be used to create all items.
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Items")]

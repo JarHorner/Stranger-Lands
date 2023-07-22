@@ -15,6 +15,7 @@ public class OverworldChest : MonoBehaviour
     [SerializeField] private Sprite closedChest;
     [SerializeField] private int chestNum;
     private bool canOpenChest = false;
+    private bool isOpened = false;
     [SerializeField] private GameObject item;
     public bool usableItem;
 
@@ -37,6 +38,12 @@ public class OverworldChest : MonoBehaviour
         // }
         var playerActionMap = inputMaster.FindActionMap("Player");
 
+        if (isOpened)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = closedChest;
+            Destroy(this.GetComponent<CircleCollider2D>());
+        }
+
         interact = playerActionMap.FindAction("Interact");
     }
 
@@ -44,7 +51,7 @@ public class OverworldChest : MonoBehaviour
     {
         //if player is within circle collider, chest has not been opened before and 'E' is pressed, chest is opened.
         //needs to check if chest has been opened again because the first check is only for animation.
-        if (canOpenChest) //&& !dungeonManager.GetChestStayOpen(chestNum))
+        if (!isOpened) //&& !dungeonManager.GetChestStayOpen(chestNum))
         {
             StartCoroutine(Open());
         }
@@ -53,8 +60,13 @@ public class OverworldChest : MonoBehaviour
     //uses the Pause() function from GameManager to prevent movement and play music of receiving chest item.
     private IEnumerator Open()
     {
-        canOpenChest = false;
+        // ensures context clue goes away, and player cannot open chest again
+        isOpened = true;
+        contextClue.Disappear();
+        interact.performed -= InteractChest;
+        interact.Disable();
         this.GetComponent<SpriteRenderer>().sprite = closedChest;
+        Destroy(this.GetComponent<CircleCollider2D>());
 
         pauseGame.Pause(false);
 
@@ -130,9 +142,8 @@ public class OverworldChest : MonoBehaviour
     //player in range, so chest can be opened.
     private void OnTriggerEnter2D(Collider2D Collider)
     {
-        if (Collider.tag == "InteractBox")
+        if (Collider.tag == "InteractBox" && !isOpened)
         {
-            canOpenChest = true;
             contextClue.ChangeContextClue(false);
             interact.performed += InteractChest;
             interact.Enable();
@@ -142,11 +153,10 @@ public class OverworldChest : MonoBehaviour
     //player not in range, so chest cant be opened.
     private void OnTriggerExit2D(Collider2D Collider)
     {
-        if (Collider.tag == "InteractBox")
+        if (Collider.tag == "InteractBox" && !isOpened)
         {
-            canOpenChest = false;
             contextClue.Disappear();
-            interact.performed += InteractChest;
+            interact.performed -= InteractChest;
             interact.Disable();
         }
     }

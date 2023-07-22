@@ -524,7 +524,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3366,7 +3366,7 @@ GameObject:
   - component: {fileID: 438630755}
   - component: {fileID: 438630754}
   m_Layer: 5
-  m_Name: ItemBox1
+  m_Name: ItemBox2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3386,11 +3386,11 @@ RectTransform:
   - {fileID: 68410454}
   - {fileID: 2108040872}
   m_Father: {fileID: 1951009306}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -170, y: -15}
+  m_AnchoredPosition: {x: -15, y: -15}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &438630754
@@ -3708,8 +3708,8 @@ MonoBehaviour:
   usableItems: {fileID: 11400000, guid: 1332053f99d33f149bf84d5e42125986, type: 2}
   nameText: {fileID: 512268424}
   descriptionText: {fileID: 1605378816}
-  itemBox1: {fileID: 438630752}
-  itemBox2: {fileID: 940948699}
+  itemBox1: {fileID: 940948699}
+  itemBox2: {fileID: 438630752}
   myInventorySlots:
   - {fileID: 689121132}
   - {fileID: 1252426453}
@@ -16631,7 +16631,7 @@ GameObject:
   - component: {fileID: 940948702}
   - component: {fileID: 940948701}
   m_Layer: 5
-  m_Name: ItemBox2
+  m_Name: ItemBox1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16651,11 +16651,11 @@ RectTransform:
   - {fileID: 2105967794}
   - {fileID: 1252283337}
   m_Father: {fileID: 1951009306}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15, y: -210}
+  m_AnchoredPosition: {x: -170, y: -210}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &940948701
@@ -17807,7 +17807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: X
+  m_Text: Y
 --- !u!222 &1045840307
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18528,6 +18528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMenu: {fileID: 449334971}
+  lastItemSlotUsed: 
 --- !u!4 &1120420039
 Transform:
   m_ObjectHideFlags: 0
@@ -28710,8 +28711,8 @@ RectTransform:
   m_Children:
   - {fileID: 1164937239}
   - {fileID: 1658691974}
-  - {fileID: 438630753}
   - {fileID: 940948700}
+  - {fileID: 438630753}
   - {fileID: 1349166351}
   - {fileID: 697627577}
   - {fileID: 1420065884}
@@ -28738,8 +28739,8 @@ MonoBehaviour:
   keySprite: {fileID: 1220481589}
   keyCount: {fileID: 679644716}
   moneyCount: {fileID: 2129301290}
-  itemBox1: {fileID: 438630752}
-  itemBox2: {fileID: 940948699}
+  itemBox1: {fileID: 940948699}
+  itemBox2: {fileID: 438630752}
 --- !u!1 &1958524719
 GameObject:
   m_ObjectHideFlags: 0
@@ -30114,7 +30115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Y
+  m_Text: X
 --- !u!222 &2090783236
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30298,7 +30299,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
