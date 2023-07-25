@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour
     #region Variables
     public TMP_Text nameText;
     public TMP_Text dialogueText;
-    public Image speakerImage;
     [SerializeField] private Animator animator;
     private PauseGame pauseGame;
     private ContextClue contextClue;
@@ -54,11 +53,7 @@ public class DialogueManager : MonoBehaviour
             PlayerController.player.currentState = PlayerState.interact;
             pauseGame.Pause(false);
             nameText.text = dialogue.name;
-            speakerImage.enabled = true;
-            if (dialogue.sprite == null)
-                speakerImage.enabled = false;
-            else
-                speakerImage.sprite = dialogue.sprite;
+
             animator.SetBool("isOpen", true);
 
             // changes the context clue to speach

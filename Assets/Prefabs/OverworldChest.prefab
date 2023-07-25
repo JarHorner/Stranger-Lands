@@ -124,6 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d5f738ccb355f46b9ade55422dffe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - You got the Bow!
+    name: 
   inputMaster: {fileID: -944628639613478452, guid: 2917b127263ae5a42999c60725b18329, type: 3}
   closedChest: {fileID: 659597566957651678, guid: ef3352a084c2ad7479dfa4a8801302e1, type: 3}
   chestNum: 0

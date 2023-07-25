@@ -19,14 +19,14 @@ public class DialogueTrigger : MonoBehaviour
 
     #region Methods
 
-    private void Start() 
+    private void Start()
     {
         contextClue = FindObjectOfType<ContextClue>();
         var playerActionMap = inputMaster.FindActionMap("Player");
 
         interact = playerActionMap.FindAction("Interact");
 
-        //containsItem = this.gameObject.GetComponent<GettingItem>() != null;
+        // containsItem = this.gameObject.GetComponent<GettingItem>() != null;
     }
 
     public void TriggerDialogue(InputAction.CallbackContext context)
@@ -38,7 +38,7 @@ public class DialogueTrigger : MonoBehaviour
         //     this.gameObject.GetComponent<GettingItem>().PickupItem();
         // }
     }
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "InteractBox")
         {
@@ -52,7 +52,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) 
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "InteractBox")
         {

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class OverworldChest : MonoBehaviour
 {
     #region Variables
+    public Dialogue dialogue;
     [SerializeField] InputActionAsset inputMaster;
     private InputAction interact;
     private PlayerUI playerUI;
@@ -53,6 +54,7 @@ public class OverworldChest : MonoBehaviour
         //needs to check if chest has been opened again because the first check is only for animation.
         if (!isOpened) //&& !dungeonManager.GetChestStayOpen(chestNum))
         {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue, false);
             StartCoroutine(Open());
         }
     }
@@ -68,7 +70,7 @@ public class OverworldChest : MonoBehaviour
         this.GetComponent<SpriteRenderer>().sprite = closedChest;
         Destroy(this.GetComponent<CircleCollider2D>());
 
-        pauseGame.Pause(false);
+        //pauseGame.Pause(false);
 
         if (!usableItem)
         {
@@ -77,9 +79,9 @@ public class OverworldChest : MonoBehaviour
             item.transform.localPosition = new Vector2(0f, 0.5f);
             GetItem();
             //after 1.5 seconds, everything returns to normal.
-            yield return new WaitForSeconds(1.5f);
+            // yield return new WaitForSeconds(1.5f);
             Destroy(item);
-            pauseGame.UnPause();
+            // pauseGame.UnPause();
         }
         else
         {
@@ -91,11 +93,12 @@ public class OverworldChest : MonoBehaviour
             GetItem();
 
             //after 1.5 seconds, everything returns to normal.
-            yield return new WaitForSeconds(1.5f);
+            // yield return new WaitForSeconds(1.5f);
             PlayerController.player.Animator.SetBool("collectItem", false);
             Destroy(item);
             pauseGame.UnPause();
         }
+        yield return null;
 
         //adds chest to list so it cannot be opened again.
         // dungeonManager.AddChestStayOpen(chestNum);
@@ -116,6 +119,10 @@ public class OverworldChest : MonoBehaviour
             int moneyAmt = int.Parse(itemSpriteName.Substring(index1 + 1, indexLength));
             playerUI.AddMoney(moneyAmt);
         }
+        else if (itemSpriteName.Contains("Health"))
+        {
+            HealthVisual.healthSystemStatic.Heal(4);
+        }
         // else if (itemSpriteName.Contains("Boss_Key"))
         // {
         //     dungeonManager.HasBossKey = true;
@@ -125,17 +132,29 @@ public class OverworldChest : MonoBehaviour
         //     dungeonManager.CurrentKeys += 1;
         //     playerUI.ChangeKeyCountText(dungeonNum);
         // }
-        else if (itemSpriteName.Contains("Health"))
-        {
-            HealthVisual.healthSystemStatic.Heal(4);
-        }
         // else if (itemSpriteName.Contains("Map"))
         // {
         //     dungeonManager.HasMap = true;
         // }
+        else if (itemSpriteName.Contains("SwimMedal"))
+        {
+            FindObjectOfType<InventoryMenu>().PopulateInventorySlot("SwimMedal");
+        }
         else if (itemSpriteName.Contains("Bow"))
         {
             FindObjectOfType<InventoryMenu>().PopulateInventorySlot("Bow");
+        }
+        else if (itemSpriteName.Contains("Lanturn"))
+        {
+            FindObjectOfType<InventoryMenu>().PopulateInventorySlot("Lanturn");
+        }
+        else if (itemSpriteName.Contains("Bomb"))
+        {
+            FindObjectOfType<InventoryMenu>().PopulateInventorySlot("Bomb");
+        }
+        else if (itemSpriteName.Contains("Earthquake"))
+        {
+            FindObjectOfType<InventoryMenu>().PopulateInventorySlot("Earthquake");
         }
     }
 

@@ -32,10 +32,9 @@ public class InventoryMenu : MonoBehaviour
         PopulateInventorySlot("LeatherArmor");
 
         //PopulateInventorySlot("SwimMedal");
-        
+
         //PopulateInventorySlot("Lanturn");
         //PopulateInventorySlot("Bomb");
-        // PopulateInventorySlot("Bow");
         //PopulateInventorySlot("Earthquake");
 
         //Singleton Effect
