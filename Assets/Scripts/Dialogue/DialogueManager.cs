@@ -72,11 +72,40 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+        //when player interacts with object that has dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
+    public void StartChestDialogue(Dialogue dialogue)
+    {
+        Debug.Log("dialogue");
+        if (!startedConversation)
+        {
+            contextClue.Disappear();
+
+            PlayerController.player.currentState = PlayerState.interact;
+            pauseGame.Pause(false);
+            nameText.text = dialogue.name;
+
+            animator.SetBool("isOpen", true);
+
+            //ensures queue is empty of past sentences, then populates queue with new sentences.
+            sentences.Clear();
+
+            foreach (string sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
+            startedConversation = true;
+        }
+
+        DisplayNextSentence();
+    }
+
     //Ends dialog if queue has no more sentences. Dequeue the sentence if the queue has another item.
     public void DisplayNextSentence()
     {
+        Debug.Log("display sentence");
         if (sentences.Count == 0)
         {
+            Debug.Log("end dialogue");
             EndDialogue();
             return;
         }
@@ -107,6 +136,22 @@ public class DialogueManager : MonoBehaviour
         contextClue.ChangeContextClue(talkingNPC);
 
         startedConversation = false;
+    }
+
+        //un-pauses the game and closes the text menus.
+    private void EndChestDialogue()
+    {
+        PlayerController.player.currentState = PlayerState.walk;
+        pauseGame.UnPause();
+        animator.SetBool("isOpen", false);
+
+        startedConversation = false;
+    }
+
+    
+    public bool StartedConversation
+    {
+        get { return startedConversation; }
     }
     #region Methods
 

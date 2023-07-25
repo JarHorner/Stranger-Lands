@@ -7,6 +7,7 @@ public class OverworldChest : MonoBehaviour
 {
     #region Variables
     public Dialogue dialogue;
+    private bool inDialogue;
     [SerializeField] InputActionAsset inputMaster;
     private InputAction interact;
     private PlayerUI playerUI;
@@ -54,34 +55,43 @@ public class OverworldChest : MonoBehaviour
         //needs to check if chest has been opened again because the first check is only for animation.
         if (!isOpened) //&& !dungeonManager.GetChestStayOpen(chestNum))
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue, false);
-            StartCoroutine(Open());
+            Open();
+
+            FindObjectOfType<DialogueManager>().StartChestDialogue(dialogue);
+            inDialogue = true;
+        }
+        else if (inDialogue)
+        {
+            FindObjectOfType<DialogueManager>().StartChestDialogue(dialogue);
+
+            if (!FindObjectOfType<DialogueManager>().StartedConversation)
+            {
+                inDialogue = false;
+                PlayerController.player.Animator.SetBool("collectItem", false);
+                contextClue.Disappear();
+                interact.performed -= InteractChest;
+                interact.Disable();
+                Destroy(item);
+            }
         }
     }
 
     //uses the Pause() function from GameManager to prevent movement and play music of receiving chest item.
-    private IEnumerator Open()
+    private void Open()
     {
         // ensures context clue goes away, and player cannot open chest again
         isOpened = true;
-        contextClue.Disappear();
-        interact.performed -= InteractChest;
-        interact.Disable();
+        //interact.performed -= InteractChest;
+        //interact.Disable();
         this.GetComponent<SpriteRenderer>().sprite = closedChest;
-        Destroy(this.GetComponent<CircleCollider2D>());
-
-        //pauseGame.Pause(false);
+        //Destroy(this.GetComponent<CircleCollider2D>());
 
         if (!usableItem)
         {
-            //shows item of chest and places it above chest.
+            //shows item of chest and places it above the chest.
             item.GetComponent<SpriteRenderer>().enabled = true;
             item.transform.localPosition = new Vector2(0f, 0.5f);
             GetItem();
-            //after 1.5 seconds, everything returns to normal.
-            // yield return new WaitForSeconds(1.5f);
-            Destroy(item);
-            // pauseGame.UnPause();
         }
         else
         {
@@ -92,16 +102,11 @@ public class OverworldChest : MonoBehaviour
             item.transform.position = new Vector2(playerPos.x, (playerPos.y + 0.8f));
             GetItem();
 
-            //after 1.5 seconds, everything returns to normal.
-            // yield return new WaitForSeconds(1.5f);
-            PlayerController.player.Animator.SetBool("collectItem", false);
-            Destroy(item);
-            pauseGame.UnPause();
-        }
-        yield return null;
+            Debug.Log("plays after dialogue");
 
-        //adds chest to list so it cannot be opened again.
-        // dungeonManager.AddChestStayOpen(chestNum);
+            //PlayerController.player.Animator.SetBool("collectItem", false);
+            //Destroy(item);
+        }
     }
 
     //gets the child of the object, which is the item within the chest, and determines what it is.
