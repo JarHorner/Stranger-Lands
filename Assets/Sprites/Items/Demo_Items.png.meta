@@ -166,7 +166,7 @@ TextureImporter:
     second: Armor
   - first:
       213: -5321690554269610788
-    second: Swim_Medal
+    second: SwimMedal
   - first:
       213: -6623569513732164289
     second: Lanturn
@@ -1414,7 +1414,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Swim_Medal
+      name: SwimMedal
       rect:
         serializedVersion: 2
         x: 63

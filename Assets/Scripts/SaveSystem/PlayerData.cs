@@ -34,14 +34,15 @@ public class PlayerData
             cameraMaxPos = new float[2];
             cameraMaxPos[0] = camera.MaxPosition.x;
             cameraMaxPos[1] = camera.MaxPosition.y;
-        totalHearts = player.TotalHearts;
-        HealthSystem healthSystem = HealthVisual.healthSystemStatic;
-        for (int i = 0; i < healthSystem.HeartList.Count; i++)
-        {
-            currentHealth += healthSystem.HeartList[i].Fragments;
-        }
-        item1 = 0;
-        item2 = 1;
+            totalHearts = player.TotalHearts;
+            HealthSystem healthSystem = HealthVisual.healthSystemStatic;
+            Debug.Log(healthSystem.HeartList.Count);
+            for (int i = 0; i < healthSystem.HeartList.Count; i++)
+            {
+                currentHealth += healthSystem.HeartList[i].Fragments;
+            }
+            item1 = 0;
+            item2 = 1;
         }
     }
 

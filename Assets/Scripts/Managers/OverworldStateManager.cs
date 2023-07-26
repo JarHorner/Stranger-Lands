@@ -1,16 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class DungeonManager
+public class OverworldStateManager : MonoBehaviour
 {
     #region Variables
-    private bool isDungeonOpened;
-    private bool hasMap;
-    private bool hasBossKey;
-    //Key: door number, Value: is door open
-    private List<MutableKeyValPair<int, bool>> keyDoors = new List<MutableKeyValPair<int, bool>>();
     //Key: chest number, Value: is chest open
     private List<MutableKeyValPair<int, bool>> chests = new List<MutableKeyValPair<int, bool>>();
     //Key: key number, Value: is key collected
@@ -23,28 +17,6 @@ public class DungeonManager
     void Awake()
     {
         currentKeys = 0;
-        isDungeonOpened = false;
-        hasMap = false;
-        hasBossKey = false;
-    }
-
-    //adds a new door to stay opened to list, used in OpenKeyDoor when player unlocks door
-    public void AddDoorStayOpen(int doorNum)
-    {
-        keyDoors.Add(new MutableKeyValPair<int, bool>(doorNum, true));
-    }
-
-    //checks to see if doorNum is in list, if not, door will not be opened when scene loads
-    public bool GetDoorStayOpen(int doorNum)
-    {
-        foreach (var item in keyDoors)
-        {
-            if (item.key == doorNum)
-            {
-                return item.value;
-            }
-        }
-        return false;
     }
 
     //adds a new chest to stay opened to list, used in OpenChest Update function when player unlocks door
@@ -91,22 +63,5 @@ public class DungeonManager
         set { currentKeys = value; }
     }
 
-    public bool IsDungeonOpened
-    {
-        get { return isDungeonOpened; }
-        set { isDungeonOpened = value; }
-    }
-
-    public bool HasMap
-    {
-        get { return hasMap; }
-        set { hasMap = value; }
-    }
-
-    public bool HasBossKey
-    {
-        get { return hasBossKey; }
-        set { hasBossKey = value; }
-    }
     #endregion
 }

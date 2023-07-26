@@ -26,10 +26,7 @@ public class HealthVisual : MonoBehaviour
     void Awake() 
     {
         heartImageList = new List<HeartImage>();
-    }
 
-    void Start() 
-    {
         if (healthSystemStatic == null && !SaveSystem.LoadedGame)
         {
             Debug.Log("Start health");

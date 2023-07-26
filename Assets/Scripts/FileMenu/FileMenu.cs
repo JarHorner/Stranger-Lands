@@ -61,8 +61,8 @@ public class FileMenu : MonoBehaviour
             {
                 SaveSystem.LoadedGame = true;
                 SceneManager.LoadScene("Forest"); // SaveSystem.CurrentPlayerData.lastScene);
-                // if (GameObject.Find("Player(Clone)") != null)
-                //     GameObject.Find("Player(Clone)").GetComponent<PlayerController>().enabled = true;
+                if (GameObject.Find("Player(Clone)") != null)
+                    GameObject.Find("Player(Clone)").GetComponent<PlayerController>().enabled = true;
             }
         }
     }
@@ -148,8 +148,8 @@ public class FileMenu : MonoBehaviour
         SaveSystem.LoadedGame = false;
         startGame = false;
         SceneManager.LoadScene("Forest");
-        // if (GameObject.Find("Player(Clone)") != null)
-        //     GameObject.Find("Player(Clone)").GetComponent<PlayerController>().enabled = true;
+        if (GameObject.Find("Player(Clone)") != null)
+            GameObject.Find("Player(Clone)").GetComponent<PlayerController>().enabled = true;
     }
 
     // Checks the file data to see if specific progress is made, so icons will show on the files panel.

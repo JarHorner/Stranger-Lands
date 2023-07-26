@@ -11,7 +11,7 @@ public class OverworldChest : MonoBehaviour
     [SerializeField] InputActionAsset inputMaster;
     private InputAction interact;
     private PlayerUI playerUI;
-    // private DungeonManager dungeonManager;
+    private OverworldStateManager overworldStateManager;
     private PauseGame pauseGame;
     private ContextClue contextClue;
     [SerializeField] private Sprite closedChest;
@@ -29,15 +29,17 @@ public class OverworldChest : MonoBehaviour
     {
         contextClue = FindObjectOfType<ContextClue>();
         playerUI = FindObjectOfType<PlayerUI>();
-        // dungeonManager = FindObjectOfType<AllDungeonsManager>().GetDungeonManager(dungeonNum);
+        overworldStateManager = FindObjectOfType<SceneStateManager>().GetOverworldStateManager(0);
         pauseGame = FindObjectOfType<PauseGame>();
+
         //if chest has already been opened before, chest stays open so it cant be re-collected.
-        //if(dungeonManager.GetChestStayOpen(chestNum))
-        // {
-        //     this.GetComponent<SpriteRenderer>().sprite = closedChest;
-        //     canOpenChest = false;
-        //     Destroy(item);
-        // }
+        if(overworldStateManager.GetChestStayOpen(chestNum))
+        {
+            this.GetComponent<SpriteRenderer>().sprite = closedChest;
+            canOpenChest = false;
+            isOpened = true;
+            Destroy(item);
+        }
         var playerActionMap = inputMaster.FindActionMap("Player");
 
         if (isOpened)
@@ -53,7 +55,7 @@ public class OverworldChest : MonoBehaviour
     {
         //if player is within circle collider, chest has not been opened before and 'E' is pressed, chest is opened.
         //needs to check if chest has been opened again because the first check is only for animation.
-        if (!isOpened) //&& !dungeonManager.GetChestStayOpen(chestNum))
+        if (!isOpened && !overworldStateManager.GetChestStayOpen(chestNum))
         {
             Open();
 
@@ -79,12 +81,10 @@ public class OverworldChest : MonoBehaviour
     //uses the Pause() function from GameManager to prevent movement and play music of receiving chest item.
     private void Open()
     {
-        // ensures context clue goes away, and player cannot open chest again
         isOpened = true;
-        //interact.performed -= InteractChest;
-        //interact.Disable();
         this.GetComponent<SpriteRenderer>().sprite = closedChest;
-        //Destroy(this.GetComponent<CircleCollider2D>());
+
+        overworldStateManager.AddChestStayOpen(chestNum);
 
         if (!usableItem)
         {
@@ -103,9 +103,6 @@ public class OverworldChest : MonoBehaviour
             GetItem();
 
             Debug.Log("plays after dialogue");
-
-            //PlayerController.player.Animator.SetBool("collectItem", false);
-            //Destroy(item);
         }
     }
 

@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-//Located with player under Managers empty object. In this location so it is never destoryed and carried on through each scene.
-public class AllDungeonsManager : MonoBehaviour
+public class SceneStateManager : MonoBehaviour
 {
     #region Variables
-    public static AllDungeonsManager _instance;
+    public static SceneStateManager _instance;
     //[SerializeField] DungeonEntranceKey dungeon0Key;
-    [SerializeField] DungeonManager dungeonManager;
-    private List<MutableKeyValPair<int, DungeonManager>> dungeons = new List<MutableKeyValPair<int, DungeonManager>>();
+    [SerializeField] DungeonStateManager dungeonManager;
+    private List<MutableKeyValPair<int, DungeonStateManager>> dungeons = new List<MutableKeyValPair<int, DungeonStateManager>>();
+    private List<MutableKeyValPair<int, OverworldStateManager>> overworldScenes = new List<MutableKeyValPair<int, OverworldStateManager>>();
     private List<MutableKeyValPair<int, bool>> dungeonEntranceKeys = new List<MutableKeyValPair<int, bool>>();
     private bool exists;
     #endregion
@@ -31,46 +30,79 @@ public class AllDungeonsManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        //creates a keyvaluepair list to store amount of dungeons. (Will be improved with more dungeons)
-        for (int i = 0; i < 8; i++)
+        //creates a keyvaluepair list to store amount of dungeons.
+        for (int i = 0; i < 1; i++)
         {
-            DungeonManager dungeon = new DungeonManager();
+            DungeonStateManager dungeon = new DungeonStateManager();
             AddDungeon(i, dungeon);
         }
 
         //creates a keyvaluepair list to store the entrance keys to open each dungeon
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 1; i++)
         {
             dungeonEntranceKeys.Add(new MutableKeyValPair<int, bool>(i, false));
+        }
+
+        //creates a keyvaluepair list to store amount of scenes in the overworld.
+        for (int i = 0; i < 2; i++)
+        {
+            OverworldStateManager overworldScene = new OverworldStateManager();
+            AddOverworldScene(i, overworldScene);
         }
     }
 
     private void OnEnable()
     {
-        //creates a keyvaluepair list to store amount of dungeons. (Will be improved with more dungeons)
-        for (int i = 0; i < 8; i++)
+        //creates a keyvaluepair list to store amount of dungeons.
+        for (int i = 0; i < 1; i++)
         {
-            DungeonManager dungeon = new DungeonManager();
+            DungeonStateManager dungeon = new DungeonStateManager();
             AddDungeon(i, dungeon);
         }
 
         //creates a keyvaluepair list to store the entrance keys to open each dungeon
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 1; i++)
         {
             dungeonEntranceKeys.Add(new MutableKeyValPair<int, bool>(i, false));
+        }
+
+        //creates a keyvaluepair list to store amount of scenes in the overworld.
+        for (int i = 0; i < 2; i++)
+        {
+            OverworldStateManager overworldScene = new OverworldStateManager();
+            AddOverworldScene(i, overworldScene);
         }
     }
 
     //adds dungeon to to list
-    private void AddDungeon(int num, DungeonManager manager)
+    private void AddDungeon(int num, DungeonStateManager manager)
     {
-        dungeons.Add(new MutableKeyValPair<int, DungeonManager>(num, manager));
+        dungeons.Add(new MutableKeyValPair<int, DungeonStateManager>(num, manager));
+    }
+
+    //adds overworld scene to to list
+    private void AddOverworldScene(int num, OverworldStateManager manager)
+    {
+        overworldScenes.Add(new MutableKeyValPair<int, OverworldStateManager>(num, manager));
     }
 
     //gets the DungeonManager object assigned to the dungeonNum key
-    public DungeonManager GetDungeonManager(int num)
+    public DungeonStateManager GetDungeonStateManager(int num)
     {
         foreach (var item in dungeons)
+        {
+            if (item.key == num)
+            {
+                return item.value;
+            }
+        }
+        return null;
+    }
+
+    //gets the DungeonManager object assigned to the dungeonNum key
+    public OverworldStateManager GetOverworldStateManager(int num)
+    {
+        foreach (var item in overworldScenes)
         {
             if (item.key == num)
             {
@@ -88,7 +120,7 @@ public class AllDungeonsManager : MonoBehaviour
             if (item.key == dungeonNum)
             {
                 item.value = true;
-                //dungeon0Key.gameObject.SetActive(true);
+                // dungeon0Key.gameObject.SetActive(true);
             }
         }
     }
