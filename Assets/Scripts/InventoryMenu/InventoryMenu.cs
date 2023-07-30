@@ -101,18 +101,18 @@ public class InventoryMenu : MonoBehaviour
             itemBox1.transform.GetChild(0).GetComponent<Image>().enabled = true;
             itemBox1.transform.GetChild(0).GetComponent<Image>().sprite = itemInSlot1.itemImage;
             if (itemInSlot1.numberHeld > -1)
-                itemBox1.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemInSlot1.numberHeld.ToString();
+                itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = itemInSlot1.numberHeld.ToString();
             else
-                itemBox1.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
+                itemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
         }
         if (itemInSlot2 != null)
         {
             itemBox2.transform.GetChild(0).GetComponent<Image>().enabled = true;
             itemBox2.transform.GetChild(0).GetComponent<Image>().sprite = itemInSlot2.itemImage;
             if (itemInSlot2.numberHeld > -1)
-                itemBox2.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemInSlot2.numberHeld.ToString();
+                itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = itemInSlot2.numberHeld.ToString();
             else
-                itemBox2.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
+                itemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
         }
     }
 

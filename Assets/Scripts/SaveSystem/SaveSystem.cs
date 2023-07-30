@@ -15,13 +15,13 @@ public static class SaveSystem
     #region Methods
 
     // saves player by taking the player data and streaming it to a file
-    public static void SavePlayer(PlayerController player, PlayerCamera camera, InventoryMenu inventoryMenu)
+    public static void SavePlayer(PlayerController player, PlayerCamera camera, InventoryMenu inventoryMenu, OverworldStateManager overworldStateManager)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + currentFileName;
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData(player, camera, inventoryMenu);
+        PlayerData data = new PlayerData(player, camera, inventoryMenu, overworldStateManager);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -43,6 +43,7 @@ public static class SaveSystem
 
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
+
             return data;
 
         }

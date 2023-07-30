@@ -32,6 +32,8 @@ public class OverworldChest : MonoBehaviour
         overworldStateManager = FindObjectOfType<SceneStateManager>().GetOverworldStateManager(0);
         pauseGame = FindObjectOfType<PauseGame>();
 
+        Debug.Log("Start chest");
+
         //if chest has already been opened before, chest stays open so it cant be re-collected.
         if(overworldStateManager.GetChestStayOpen(chestNum))
         {
