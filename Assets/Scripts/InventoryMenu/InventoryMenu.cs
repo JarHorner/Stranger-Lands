@@ -31,12 +31,6 @@ public class InventoryMenu : MonoBehaviour
         PopulateInventorySlot("WoodShield");
         PopulateInventorySlot("LeatherArmor");
 
-        //PopulateInventorySlot("SwimMedal");
-
-        //PopulateInventorySlot("Lanturn");
-        //PopulateInventorySlot("Bomb");
-        //PopulateInventorySlot("Earthquake");
-
         //Singleton Effect
         if (!exists)
         {
@@ -52,9 +46,14 @@ public class InventoryMenu : MonoBehaviour
 
     void Start()
     {
-        // if game was loaded, ensures the item slots are loaded with items the player already has
+        // if game was loaded, ensures the item slots are loaded with items the player already has, and inventory is populated
         if (SaveSystem.LoadedGame)
         {
+            foreach (var item in SaveSystem.CurrentPlayerData.items)
+            {
+                Debug.Log(item);
+                PopulateInventorySlot(item);
+            }
             LoadItemsToSlots();
         }
     }
