@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //SaveSystem.SavePlayer(FindObjectOfType<PlayerController>(), FindObjectOfType<PlayerCamera>(), FindObjectOfType<InventoryMenu>());
         ChangeCurrentScene();
         playerUI = FindObjectOfType<PlayerUI>();
         //changes the amt of keys shown in the UI depending on scene (Will add more with more dungeons)

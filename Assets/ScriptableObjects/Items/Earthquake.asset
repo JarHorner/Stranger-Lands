@@ -23,4 +23,16 @@ MonoBehaviour:
   playerOwns: 1
   thisEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3129086291239665705, guid: 069be885cdd01a647aff8603657c7414, type: 3}
+        m_TargetAssemblyTypeName: Earthquake, Assembly-CSharp
+        m_MethodName: UnleashEarthquake
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 40
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

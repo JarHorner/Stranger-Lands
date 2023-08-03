@@ -20,7 +20,7 @@ public class PlayerUI : MonoBehaviour
 
     #region Unity Methods
 
-    private void Awake() 
+    private void Awake()
     {
         //Singleton Effect
         if (!exists)
@@ -31,7 +31,7 @@ public class PlayerUI : MonoBehaviour
         }
         else
         {
-            Destroy (gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -44,23 +44,23 @@ public class PlayerUI : MonoBehaviour
         }
     }
 
-    private void Update() 
+    private void Update()
     {
 
     }
 
     //changes key count to the amt of keys you have in a specific dungeon
-    public void ChangeKeyCountText(int dungeonNum)
+    public void ChangeKeyCountText(int sceneNum)
     {
-        if (dungeonNum == -1) 
-        {
-            keyCount.text = "-";
-        }
-        else 
-        {
-            //int numOfKeys = allDungeonsManager.GetDungeonManager(dungeonNum).CurrentKeys;
-            //keyCount.text = numOfKeys.ToString();
-        }
+        // if (dungeonNum == -1) 
+        // {
+        //     keyCount.text = "-";
+        // }
+        // else 
+        // {
+        int numOfKeys = FindObjectOfType<OverworldStateManager>().CurrentKeys;
+        keyCount.text = numOfKeys.ToString();
+        // }
     }
 
     //gets the current amount of money
@@ -70,7 +70,7 @@ public class PlayerUI : MonoBehaviour
     }
 
     //adds money to total
-    public void AddMoney(int amt) 
+    public void AddMoney(int amt)
     {
         string count = moneyCount.text;
         Debug.Log(count);
@@ -86,7 +86,7 @@ public class PlayerUI : MonoBehaviour
         int total = int.Parse(moneyCount.text) - amt;
         moneyCount.text = total.ToString();
     }
-    
+
     public GameObject ItemBox1
     {
         get { return itemBox1; }
