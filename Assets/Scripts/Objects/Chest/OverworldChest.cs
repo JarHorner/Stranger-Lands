@@ -29,7 +29,7 @@ public class OverworldChest : MonoBehaviour
     {
         contextClue = FindObjectOfType<ContextClue>();
         playerUI = FindObjectOfType<PlayerUI>();
-        overworldStateManager = FindObjectOfType<SceneStateManager>().GetOverworldStateManager(0);
+        overworldStateManager = FindObjectOfType<OverworldStateManager>();
         pauseGame = FindObjectOfType<PauseGame>();
 
         Debug.Log("Start chest");
