@@ -27,7 +27,7 @@ public class BreakableObject : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = PlayerController.player;
 
         var playerActionMap = inputMaster.FindActionMap("Player");
 
@@ -82,7 +82,8 @@ public class BreakableObject : MonoBehaviour
     {
         if (pickup && !player.IsCarrying)
         {
-            this.transform.position = new Vector3(player.transform.position.x, (player.transform.position.y + 0.8f), 0);
+            player.Animator.SetTrigger("Pickup");
+            this.transform.position = new Vector3(player.transform.position.x, (player.transform.position.y + 0.55f), 0);
             this.transform.parent = player.transform;
             player.IsCarrying = true;
             objectCollider.isTrigger = true;
@@ -112,9 +113,8 @@ public class BreakableObject : MonoBehaviour
         {
             thrownPos = -transform.up;
         }
-
+        player.Animator.SetTrigger("Thrown");
         this.transform.parent = null;
-        //this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
         objectCollider.isTrigger = false;
         player.IsCarrying = false;
         rb.isKinematic = false;
