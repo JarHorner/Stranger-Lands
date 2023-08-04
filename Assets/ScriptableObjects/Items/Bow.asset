@@ -19,7 +19,7 @@ MonoBehaviour:
   maxNumberHeld: 30
   usable: 1
   unique: 0
-  playerOwns: 1
+  playerOwns: 0
   thisEvent:
     m_PersistentCalls:
       m_Calls:

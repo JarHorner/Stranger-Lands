@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
         }
 
         gameManager = FindObjectOfType<GameManager>();
+        inventoryMenu = FindObjectOfType<InventoryMenu>();
         uiManager = FindObjectOfType<UIManager>();
         lastPlayerLocation = this.transform.position;
         Debug.Log(lastPlayerLocation);
@@ -341,7 +342,7 @@ public class PlayerController : MonoBehaviour
     //enables regular movement when colliding with OutOfWater trigger when leaving water.
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Water")
+        if (collider.gameObject.tag == "Water" && inventoryMenu.HasSwimMedal())
         {
             Debug.Log("water triggered");
             //sets swimming animation and new player speed
