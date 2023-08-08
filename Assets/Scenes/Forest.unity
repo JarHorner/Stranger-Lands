@@ -74311,7 +74311,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545528428322557631, guid: 3d4126a1cba95fd42b895769d47d76cc, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Congratz! You can read this sign!
+      value: Congratz! You can read this sign! This long sentence is going to be
+        used to test an updated dialogue system where the player can skip to see
+        the rest of the text without waiting. Lets hope it works!
       objectReference: {fileID: 0}
     - target: {fileID: 6545528428322557631, guid: 3d4126a1cba95fd42b895769d47d76cc, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]

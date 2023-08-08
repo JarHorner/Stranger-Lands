@@ -15,7 +15,9 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager _instance;
     private Queue<string> sentences;
     private bool startedConversation;
+    [SerializeField] private bool fullSentenceDisplayed;
     private bool talkingNPC;
+    private string currentSentence;
 
     #endregion
     void Awake()
@@ -67,12 +69,13 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(sentence);
             }
             startedConversation = true;
+            fullSentenceDisplayed = true;
         }
 
         DisplayNextSentence();
     }
 
-        //when player interacts with object that has dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
+    //when player interacts with object that has dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
     public void StartChestDialogue(Dialogue dialogue)
     {
         Debug.Log("dialogue");
@@ -110,9 +113,19 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+
+        if (fullSentenceDisplayed)
+        {
+            currentSentence = sentences.Dequeue();
+            StartCoroutine(TypeSentence(currentSentence));
+            fullSentenceDisplayed = false;
+        }
+        else
+        {
+            dialogueText.text = currentSentence;
+            fullSentenceDisplayed = true;
+        }
     }
 
     //types the sentence out 1 letter at a time in the text box.
@@ -124,6 +137,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(0.01f);
         }
+        fullSentenceDisplayed = true;
     }
 
     //un-pauses the game and closes the text menus.
@@ -138,7 +152,7 @@ public class DialogueManager : MonoBehaviour
         startedConversation = false;
     }
 
-        //un-pauses the game and closes the text menus.
+    //un-pauses the game and closes the text menus.
     private void EndChestDialogue()
     {
         PlayerController.player.currentState = PlayerState.walk;
@@ -148,7 +162,7 @@ public class DialogueManager : MonoBehaviour
         startedConversation = false;
     }
 
-    
+
     public bool StartedConversation
     {
         get { return startedConversation; }
