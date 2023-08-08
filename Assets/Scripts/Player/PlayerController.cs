@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private UIManager uiManager;
     private InventoryMenu inventoryMenu;
     public int totalHearts = 3;
+    public string startPoint;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private CapsuleCollider2D hitBox;
     [SerializeField] private CapsuleCollider2D physicBox;
@@ -385,6 +386,11 @@ public class PlayerController : MonoBehaviour
     public Animator Animator
     {
         get { return animator; }
+    }
+    public string StartPoint
+    {
+        get { return startPoint; }
+        set { startPoint = value; }
     }
     public static bool PlayerExists
     {
