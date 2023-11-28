@@ -35,7 +35,7 @@ public class OverworldChest : MonoBehaviour
         Debug.Log("Start chest");
 
         //if chest has already been opened before, chest stays open so it cant be re-collected.
-        if(overworldStateManager.GetChestStayOpen(chestNum))
+        if (overworldStateManager.GetChestStayOpen(chestNum))
         {
             this.GetComponent<SpriteRenderer>().sprite = closedChest;
             canOpenChest = false;
@@ -159,6 +159,10 @@ public class OverworldChest : MonoBehaviour
         else if (itemSpriteName.Contains("Earthquake"))
         {
             FindObjectOfType<InventoryMenu>().PopulateInventorySlot("Earthquake");
+        }
+        else if (itemSpriteName.Contains("FinderWand"))
+        {
+            FindObjectOfType<InventoryMenu>().PopulateInventorySlot("FinderWand");
         }
     }
 
