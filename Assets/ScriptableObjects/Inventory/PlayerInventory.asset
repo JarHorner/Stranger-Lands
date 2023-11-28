@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myInventory:
   - {fileID: 11400000, guid: f520ce0f17581244092a62c776bbe998, type: 2}
-  - {fileID: 11400000, guid: 7215ae834f5d3e64b9eb782ff303fc86, type: 2}
+  - {fileID: 11400000, guid: d478c402d46e96d47916175c1b991289, type: 2}
   - {fileID: 11400000, guid: c95e5c3927c125a4894ab5e7afec8d14, type: 2}
+  - {fileID: 11400000, guid: 7215ae834f5d3e64b9eb782ff303fc86, type: 2}
   - {fileID: 11400000, guid: cc9bc10688fc60b4593ab942d070244d, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 256bae0ff127e6542adf71bd42adc81a, type: 2}
   - {fileID: 11400000, guid: 7898b049ed07ca642a895a3fa0c5bb7c, type: 2}
   - {fileID: 11400000, guid: c2869c6004f0d48408b496a8219a7a9e, type: 2}

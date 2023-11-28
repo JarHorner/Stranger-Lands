@@ -125,8 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - You got the Bow!
+    sentences: []
     name: 
   inputMaster: {fileID: -944628639613478452, guid: 2917b127263ae5a42999c60725b18329, type: 3}
   closedChest: {fileID: 659597566957651678, guid: ef3352a084c2ad7479dfa4a8801302e1, type: 3}

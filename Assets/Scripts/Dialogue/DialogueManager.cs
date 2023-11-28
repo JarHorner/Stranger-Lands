@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
         contextClue = FindObjectOfType<ContextClue>();
     }
 
-    //when player interacts with object that has dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
+    //when player interacts with NPC dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
     public void StartDialogue(Dialogue dialogue, bool isNPC)
     {
         Debug.Log("dialogue");
@@ -75,7 +75,7 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    //when player interacts with object that has dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
+    //when player interacts with chest dialog. Sets up the dialog that object has, then uses the DisplayNextSentence() 
     public void StartChestDialogue(Dialogue dialogue)
     {
         Debug.Log("dialogue");
@@ -105,17 +105,14 @@ public class DialogueManager : MonoBehaviour
     //Ends dialog if queue has no more sentences. Dequeue the sentence if the queue has another item.
     public void DisplayNextSentence()
     {
-        Debug.Log("display sentence");
-        if (sentences.Count == 0)
+        StopAllCoroutines();
+
+        if (fullSentenceDisplayed && sentences.Count == 0)
         {
-            Debug.Log("end dialogue");
             EndDialogue();
             return;
         }
-
-        StopAllCoroutines();
-
-        if (fullSentenceDisplayed)
+        else if (fullSentenceDisplayed)
         {
             currentSentence = sentences.Dequeue();
             StartCoroutine(TypeSentence(currentSentence));
