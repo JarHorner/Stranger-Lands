@@ -1,0 +1,62 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class BombPickup : MonoBehaviour
+{
+    #region Variables
+
+    [SerializeField] private InventoryItem bombInvItem;
+    private PlayerUI playerUI;
+    [SerializeField] private int amountGiven;
+
+    #endregion
+
+    #region Methods
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            int total = bombInvItem.numberHeld += amountGiven;
+
+            playerUI = FindObjectOfType<PlayerUI>();
+            Image item1 = playerUI.ItemBox1.transform.GetChild(0).GetComponent<Image>();
+            Image item2 = playerUI.ItemBox2.transform.GetChild(0).GetComponent<Image>();
+
+            TextMeshProUGUI textToChange;
+
+            //checks which item box has the bow, and adjusts arrow value
+            if (item1.sprite.name == "Bomb")
+            {
+                textToChange = playerUI.ItemBox1.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            }
+            else if (item2.sprite.name == "Bomb")
+            {
+                textToChange = playerUI.ItemBox2.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            }
+            else
+            {
+                textToChange = null;
+            }
+
+            if (total > bombInvItem.maxNumberHeld)
+            {
+                bombInvItem.numberHeld = bombInvItem.maxNumberHeld;
+                textToChange.text = "" + bombInvItem.maxNumberHeld;
+            }
+            else
+            {
+                bombInvItem.numberHeld = total;
+                if (textToChange != null)
+                    textToChange.text = "" + total;
+            }
+
+            Destroy(this.gameObject);
+        }
+    }
+
+    #endregion
+}

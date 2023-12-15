@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Armor
   itemDescription: Hardened leather armor, the finest protection few coins can buy.
-  itemImage: {fileID: 2327322315779589323, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
+  itemImage: {fileID: -3201115669261707421, guid: 49d6b773e489dab4f8a56622f8ffcc25, type: 3}
   numberHeld: -1
   maxNumberHeld: 0
   usable: 0

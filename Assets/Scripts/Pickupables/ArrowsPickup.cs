@@ -10,6 +10,7 @@ public class ArrowsPickup : MonoBehaviour
 
     [SerializeField] private InventoryItem bowInvItem;
     private PlayerUI playerUI;
+    [SerializeField] private int amountGiven;
 
     #endregion
 
@@ -19,7 +20,7 @@ public class ArrowsPickup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            int total = bowInvItem.numberHeld += 5;
+            int total = bowInvItem.numberHeld += amountGiven;
 
             playerUI = FindObjectOfType<PlayerUI>();
             Image item1 = playerUI.ItemBox1.transform.GetChild(0).GetComponent<Image>();

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Lanturn
   itemDescription: The trusty family lanturn. Use to create fires in-front of you.
-  itemImage: {fileID: -6623569513732164289, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
+  itemImage: {fileID: 2052794240185667191, guid: 49d6b773e489dab4f8a56622f8ffcc25, type: 3}
   numberHeld: -1
   maxNumberHeld: 0
   usable: 1

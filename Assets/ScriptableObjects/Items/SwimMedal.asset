@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Swim Medal
   itemDescription: Does the medal contain swim magic, or is it the confidence of
     having the medal?
-  itemImage: {fileID: -5321690554269610788, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
+  itemImage: {fileID: 4394180572296971927, guid: 49d6b773e489dab4f8a56622f8ffcc25, type: 3}
   numberHeld: -1
   maxNumberHeld: 0
   usable: 0

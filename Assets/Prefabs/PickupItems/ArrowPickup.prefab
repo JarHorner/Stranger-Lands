@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 1731866235
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: -4400478034594349385, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
+  m_Sprite: {fileID: -2068112898027679500, guid: bdf78f5984c4b2e44b3d26563214d4ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.4375, y: 0.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -113,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bowInvItem: {fileID: 11400000, guid: c95e5c3927c125a4894ab5e7afec8d14, type: 2}
+  amountGiven: 5

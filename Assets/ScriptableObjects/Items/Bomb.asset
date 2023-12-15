@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bomb
   itemDescription: An explosive that can be dropped and thrown. No instructions needed.
-  itemImage: {fileID: 4275550657137633410, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
+  itemImage: {fileID: -2199482130567637788, guid: 49d6b773e489dab4f8a56622f8ffcc25, type: 3}
   numberHeld: 10
   maxNumberHeld: 10
   usable: 1

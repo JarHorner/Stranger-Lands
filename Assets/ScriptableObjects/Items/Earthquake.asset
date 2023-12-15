@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Earthquake
   itemDescription: A powerful spell that wreaks havoc around you, damaging enemies
     caught in the mayhem.
-  itemImage: {fileID: 8692757479973162702, guid: f8835ad9bb7848a4e821c8db9c8de7c3, type: 3}
+  itemImage: {fileID: -2278089173027937953, guid: 49d6b773e489dab4f8a56622f8ffcc25, type: 3}
   numberHeld: -1
   maxNumberHeld: 0
   usable: 1
